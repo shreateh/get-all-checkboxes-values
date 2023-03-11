@@ -1,0 +1,47 @@
+<!-- coded by https://shreateh.net/links -->
+<html>
+<head>
+    <title>shreateh.net/links</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+  
+    </style>    
+</head>
+
+<body>
+<div>
+<div style="text-align:left; padding:3px"><input type="checkbox" class="kcheck" name="delete_posts" value="1" id="u_2t_2"><label for="u_2t_2">Delete all of Member's posts from the last 7 days</label><br><input type="checkbox" class="kcheck" name="delete_comments" value="1" id="u_2t_3"><label for="u_2t_3">Delete Member's comments from the last 7 days</label><br><input type="checkbox" class="kcheck" name="delete_story_threads" value="1" id="u_2t_4"><label for="u_2t_4">Delete Member's stories from the last 24 hours</label><br><input type="checkbox" class="kcheck" name="delete_poll_options" value="1" id="u_2t_5"><label for="u_2t_5">Delete Member's poll options from the last 7 days</label><br><input type="checkbox" class="kcheck" name="delete_invites" value="1" id="u_2t_6"><label for="u_2t_6">Decline any pending members invited from the last 7 days</label><br></div>
+<button onclick="count()">
+count
+</button>
+<div id="result">
+
+</div>
+ 
+<script type="text/javascript">
+function count(){
+var rst =""; 
+var inputElements = document.getElementsByClassName('kcheck');
+for(var i=0; inputElements[i]; ++i){
+      if(inputElements[i].checked){
+    rst+= inputElements[i].name+"="+inputElements[i].value+"&";
+
+      }
+}
+rst = rst.substring(0, rst.length - 1);
+document.querySelector("#result").innerText=rst; 
+}
+</script>
+  
+</div>
+</body>
+</html>
